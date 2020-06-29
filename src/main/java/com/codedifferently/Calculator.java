@@ -1,8 +1,7 @@
 package com.codedifferently;
 
 public class Calculator {
-   public double value;
-   public double curval;
+   private double curval;
 
     double add(double value)
     {
@@ -24,11 +23,15 @@ public class Calculator {
     }
     void clear()
     {
-        curval = 0.0;
+        this.curval = 0.0;
     }
     void setCurrentValue(double value)
     {
         curval =value; 
+    }
+    double getCurrentValue()
+    {
+        return this.curval;
     }
     double negate(double value)
     {

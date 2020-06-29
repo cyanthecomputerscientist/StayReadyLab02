@@ -3,7 +3,7 @@ package com.codedifferently;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CaculatorTest {
+public class CalculatorTest {
     
     @Test
     public void addTest()
@@ -13,7 +13,7 @@ public class CaculatorTest {
         double currentval = 2.0;
         Calculator calcTest = new Calculator();
         //When 
-        calcTest.curval= currentval;
+        calcTest.setCurrentValue(value);
         //Then 
         double expectedvalue = currentval+ value;
         double actualValue = calcTest.add(value);
@@ -27,7 +27,7 @@ public class CaculatorTest {
         double currentval =4.0;
         Calculator calcTest = new Calculator(); 
         //When
-        calcTest.curval = currentval;
+        calcTest.setCurrentValue(currentval);
         //Then
         double expectedvalue = currentval - value;
         double actualValue = calcTest.subtract(value);
@@ -41,7 +41,7 @@ public class CaculatorTest {
         double currentval = 2.0;
         Calculator calcTest = new Calculator();
         //When 
-        calcTest.curval = currentval;
+        calcTest.setCurrentValue(currentval);
         //Then
         double expectedvalue = currentval * value; 
         double actualValue = calcTest.multiply(value);
@@ -55,7 +55,7 @@ public class CaculatorTest {
           double currentval = 2.0;
           Calculator calcTest = new Calculator();
           //When 
-          calcTest.curval = currentval;
+          calcTest.setCurrentValue(currentval);
           //Then
           double expectedvalue = currentval / value; 
           double actualValue = calcTest.divide(value);
@@ -69,11 +69,11 @@ public class CaculatorTest {
         double value = 2.0;
         Calculator calcTest = new Calculator();
         //When 
-        calcTest.curval = value;
+        calcTest.setCurrentValue(value);
         calcTest.clear();
         //Then
         double expectedvalue = 0.0;
-        double actualValue = calcTest.curval;
+        double actualValue = calcTest.getCurrentValue();
         Assert.assertEquals(expectedvalue, actualValue, 0.0);
     }
     @Test
@@ -86,7 +86,20 @@ public class CaculatorTest {
         calcTest.setCurrentValue(value);
         //Then
         double expectedvalue = value; 
-        double actualValue = calcTest.curval;
+        double actualValue = calcTest.getCurrentValue();
+        Assert.assertEquals(expectedvalue, actualValue, 0.0);
+    }
+    @Test
+    public void getCurrentValueTest()
+    {
+        //Given
+        double value =2.0;
+        Calculator calcTest = new Calculator();
+        //When
+        calcTest.setCurrentValue(value);
+        //Then
+        double expectedvalue = value;
+        double actualValue = calcTest.getCurrentValue();
         Assert.assertEquals(expectedvalue, actualValue, 0.0);
     }
     @Test
@@ -96,7 +109,7 @@ public class CaculatorTest {
         double value = 2.0;
         Calculator calcTest = new Calculator();
         //When
-        calcTest.curval=value; 
+        calcTest.setCurrentValue(value); 
         //Then
         double expectedvalue = value * -1;
         double actualValue = calcTest.negate(value);
