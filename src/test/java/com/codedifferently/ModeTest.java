@@ -1,4 +1,4 @@
-package io.codedifferently;
+package com.codedifferently;
 
 import org.junit.Assert;
 import org.junit.Test;

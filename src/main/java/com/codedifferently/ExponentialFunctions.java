@@ -5,34 +5,34 @@ public class ExponentialFunctions {
     
     double getValue()
     {
-        return 0.0;
+        return value;
     }
     void setValue(double val)
     {
-
+        this.value = val;
     }
     double powerOf(double val, double power)
     {
-        return 0.0;
+        return Math.pow(val, power);
     }
     double squareRootOF(double val)
     {
-        return 0.0;
+        return Math.sqrt(val);
     }
     double cubedRootOf(double val)
     {
-        return 0.0;
+        return Math.cbrt(val);
     }
     double commonLogOf(double val)
     {
-        return 0.0;
+        return Math.log10(val);
     }
     double naturalLogOf(double val)
     {
-        return 0.0;
+        return Math.log(val);
     }
     double expFunction(double power)
     {
-        return 0.0;
+        return Math.exp(power);
     }
 }

@@ -1,4 +1,4 @@
-package io.codedifferently;
+package com.codedifferently;
 
 public class Mode {
 
@@ -21,7 +21,7 @@ public class Mode {
         double dval = Math.toDegrees(value);
         return dval;
     }
-    
+    //Functionality will be implemenented upon further Java language
     void binaryMode(double value)
     {
 

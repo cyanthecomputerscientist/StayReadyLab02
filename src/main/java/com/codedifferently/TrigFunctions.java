@@ -1,4 +1,4 @@
-package io.codedifferently;
+package com.codedifferently;
 
 public class TrigFunctions {
      double value;
