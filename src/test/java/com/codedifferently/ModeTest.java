@@ -6,6 +6,21 @@ import org.junit.Test;
 public class ModeTest {
     
     @Test
+    public void modeSelectTest()
+    {
+        //Given
+        int mod =1; 
+       Mode modeTest = new Mode();
+        //When 
+        modeTest.modeSelect(mod);
+        String message = "This mode has been selected";        
+        //Then
+        int expectedvalue = 1;
+        int actualvalue = modeTest.mode;
+        Assert.assertEquals(message, expectedvalue, actualvalue);
+    }
+
+    @Test
     public void radianModeTest()
     {
         //Given
@@ -13,7 +28,7 @@ public class ModeTest {
         //When
         Mode mod = new Mode();
         mod.val = val; 
-       mod.val = mod.radiansMode(mod.val);
+        mod.val = mod.radiansMode(mod.val);
         double expectedvalue = (Math.PI)/2;
         double actualvalue = mod.val;
         //Then
