@@ -18,6 +18,10 @@ public class Calculator {
     }
     double divide(double value)
     {
+        if(value==0)
+        {
+            return -1.0;
+        }
         curval = curval/ value;
         return curval;
     }

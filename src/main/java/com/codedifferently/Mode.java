@@ -21,7 +21,7 @@ public class Mode {
         double dval = Math.toDegrees(value);
         return dval;
     }
-    //Functionality will be implemenented upon further Java language
+    //Functionality will be implemenented upon further Java language Learning
     void binaryMode(double value)
     {
 
